@@ -29,21 +29,24 @@ public class Problem1 {
         String spaceChar="~",separator="|";
         for(int i=0;i<n;i++){
             int front,center,back;
-            front=0;
-
+            
             //For Front Spaces
+            front=0;
             for(;front<spaces-i;front++){
                 System.out.print(spaceChar);
             }
+            //For Values
             center=front;
             for(;center<front+n;center++){
                 value+=sign;
                 System.out.print(value+separator);
             }
+            //For Back Spaces
             back=center;
             for(;back<n*2-1;back++){
                 System.out.print("~");
             }
+            //Change Signature and values
             value+=n+sign;
             sign=-sign;
             System.out.println();
